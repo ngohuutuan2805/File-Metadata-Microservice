@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  p Submit a file to view its filesize
+  form(action='/get-file-size', method='post', enctype='multipart/form-data')
+    input(type='file', name='filename')
+    input(type='submit')
